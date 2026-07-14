@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="Na7b605d936934f12adfefad1afecbf1e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#isFoodOf"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#PlantPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/awo-odp-synthesis#FoodItem"/>
+    <rdfs:subClassOf rdf:nodeID="N295a09b266784502acddb70ec69ffa34"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#sharesHabitatWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <owl:propertyChainAxiom rdf:nodeID="N4159adb330dd4625a25f1342730288de"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#isHabitatFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Habitat"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N56cf323231754d36aa6851d6fca2a72b">
+    <rdf:first rdf:nodeID="Nce4ea02231a54b399fad617af42a6de6"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#hasLocation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Entity"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Place"/>
+    <owl:inverseOf rdf:resource="http://example.org/awo-odp-synthesis#isLocationOf"/>
+    <rdfs:comment>Adapted from Place ODP.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2c0a30d0674943d9ab3adf0f11f94869">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#eats"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#PlantOrPlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Omnivore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N49bd4b6c3389487dadb94d3bd77a8fab"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Animal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/awo-odp-synthesis#Organism"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/awo-odp-synthesis#FoodItem"/>
+    <owl:disjointWith rdf:resource="http://example.org/awo-odp-synthesis#Plant"/>
+    <owl:disjointWith rdf:resource="http://example.org/awo-odp-synthesis#PlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#preysUpon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/awo-odp-synthesis#feedsUpon"/>
+    <owl:inverseOf rdf:resource="http://example.org/awo-odp-synthesis#isPreyedUponBy"/>
+    <rdfs:comment>Adapted from SpeciesEat ODP preyesUpon/preysUpon.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8f34e1a10e154759b22c53ecedb19cc5">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="Nbdfc87271ed84a6fa254a5bec54297b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd3827e8a47a24d8ab815acc88e3fbdfe">
+    <rdf:first rdf:nodeID="N2c0a30d0674943d9ab3adf0f11f94869"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3bd447f548324d769836c782de928b94">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="Nd73742baa23149f6a691bfa582b76071"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na2a09a7c8e3c4cd886bff5a1689ff78d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#hasConservationStatus"/>
+    <owl:hasValue>Endangered</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:title>AWO competency-question ontology synthesised with selected ODPs</dcterms:title>
+    <dcterms:description>Synthesised ontology from animal-world competency questions and the inspected ODP library. Selected ODP commitments include SpeciesEat, PartOf, Place, SpeciesHabitat, and SpeciesConservation where conceptually required.</dcterms:description>
+    <owl:versionInfo>2026-07-05</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#AnimalEatenByAnimal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N94bc97dc390544809cf97c19e99d8ae2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbaad9adc270e4039b04fe3370750d214">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#eats"/>
+    <owl:allValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N74ec78a1f8754f35acb59f988067e111">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#drinks"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Water"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Carnivore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N19a21253ec684fc3b34c860a7b3459d0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N41f31fe402d347cf9ed264a16d87c7c5">
+    <owl:intersectionOf rdf:nodeID="N534094c377af413f8de6d02202cf3062"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N86352929205341c69f30d5fabd0d4404">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#PlantPart"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc9764f75f658408fb06ec4ec659e7201">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#preysUpon"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0d83c468f3c74185aee9b1a39ff521f3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#sharesHabitatWith"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncbfce2a364d643f49e1d2cfc176544a0">
+    <owl:intersectionOf rdf:nodeID="N0d61c888093a4446aa5f843e9f85b065"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#occursInCountry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Country"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/awo-odp-synthesis#hasLocation"/>
+    <owl:inverseOf rdf:resource="http://example.org/awo-odp-synthesis#isCountryOfOccurrenceOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N59db1bbbbc9749a1b62387a9d4005a82">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="Ne1fba320cd0842c0a08fbe6cc4789e2f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#CountryToVisitForAnimal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N9af20623ad5e48069caffc40e2c00938"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbbcf2760d7d54133bd2d421984e5a5e8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#eats"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#PlantOrPlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#LionThatEatsPlantsOrPlantParts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N41f31fe402d347cf9ed264a16d87c7c5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#CarnivoreThatEatsPlantMaterial">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N2a0a8d187011495194c90e1d49c72c0b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Herbivore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N4270f000858743ab9934a1e7959c465b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc18bd7044fa04a63b8065f644cd9c393">
+    <rdf:first rdf:nodeID="Nbaad9adc270e4039b04fe3370750d214"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N18a99501777d4ba6bdf153115fa54de9">
+    <rdf:first rdf:nodeID="N423e02ad92ff4af4bd558d0274e32a1f"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N423e02ad92ff4af4bd558d0274e32a1f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#eats"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#PlantOrPlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4c352732929d4601a8089da83ecf06cb">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="N3e8f857f69c046fcac26cfb6dd3d3f0e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Plant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/awo-odp-synthesis#Organism"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/awo-odp-synthesis#FoodItem"/>
+    <owl:disjointWith rdf:resource="http://example.org/awo-odp-synthesis#PlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#isFoodOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0151022425074e78a6c0fab00aceef12">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#occursInCountry"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Country"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3b4e68343a5645c2a3a92ed422ec3b18">
+    <rdf:first rdf:nodeID="N25f53b964a7b4a4ca6dc7843671dade2"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#AnimalEatingAnimal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N01e9e73347f74008b87369a8c825dd6d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#AnimalThatEatsPlantsOrPlantParts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Ne1afedb5f2d34a68b656a415243ca368"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N77b1f79afd4e473ab606f76baa62ffe7">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#isHabitatFor"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Lion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0dccce920e054fdbae36c0974fde1dec">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="Nb46a83c8a18a4132a1b3a6b023340142"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#drinks">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Substance"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc14682fdaee14655a39be3c46ab67a9a">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="N048519841f0a4cb5968540c53b8c50fe"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N295a09b266784502acddb70ec69ffa34">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#partOf"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Plant"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N266cba6258b54ebc8da4aaa46fb42653">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#eats"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#PlantOrPlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#eats">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Organism"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#FoodItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nee4259eb4c084758913ca577d295bc6f">
+    <rdf:first rdf:nodeID="N0d83c468f3c74185aee9b1a39ff521f3"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N11c57f80dca8417eb1686dc814f24226">
+    <rdf:first rdf:nodeID="N4f217e4037544a7bbe61a035170b99f1"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N96f80f7fe9c44a999c49f9b3e6c13307">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="N33ed562edec34e3c821ac9fbf6dd812a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncead236472244270a9762fec9db6c387">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#eats"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#PlantOrPlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1f3b716caf1f4eb1a8772fd79661c538">
+    <rdf:first rdf:nodeID="Na4b5fa5d0e59450fad1e6fb990c1bb2f"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd7357266683642b1a6fb500043aba19d">
+    <owl:intersectionOf rdf:nodeID="N59db1bbbbc9749a1b62387a9d4005a82"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#partOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Entity"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Entity"/>
+    <owl:inverseOf rdf:resource="http://example.org/awo-odp-synthesis#hasPart"/>
+    <rdfs:comment>Adapted from PartOf ODP.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#FoodItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0b004457fba64dbcb1cd4f706410a226">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#eats"/>
+    <owl:allValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#PlantOrPlantPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Predator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Nd19b02a5be324ffbbef201e9b9abb98c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naf149645332441f683276bb8058b8fdd">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="N3b4e68343a5645c2a3a92ed422ec3b18"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0c5c67c132e34ec481954ab36928a778">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#eats"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#AnimalWithHabitat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Nd7357266683642b1a6fb500043aba19d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N11bcdd843e59443b8602a92e80f2bf56">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#isPreyedUponBy"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9b8e1d016b5b460382af4e704e0459e4">
+    <rdf:first rdf:nodeID="Nbbcf2760d7d54133bd2d421984e5a5e8"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#isLocationOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Place"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#ConservationStatusAnimal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N10439464aa0a4e03bc81c543d95a3d10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#hasConservationStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Adapted from SpeciesConservation ODP.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#hasPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Entity"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#PreyAnimal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Nef50792bf3134ba49935d78ad8e91932"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne1490551f20548aeb670e4187f29fb17">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Omnivore"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndcc03a388f05465da7911b822c61f584">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#eats"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0c80bca7ba434ea593815245381e2c42">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Carnivore"/>
+    <rdf:rest rdf:nodeID="N9b8e1d016b5b460382af4e704e0459e4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Organism">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/awo-odp-synthesis#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5db18f86da454ace98feec05d0eecbfb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#hasConservationStatus"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb46a83c8a18a4132a1b3a6b023340142">
+    <rdf:first rdf:nodeID="N0c5c67c132e34ec481954ab36928a778"/>
+    <rdf:rest rdf:nodeID="N18a99501777d4ba6bdf153115fa54de9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#CarnivorousPlant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Ncbfce2a364d643f49e1d2cfc176544a0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N475950f9c4b84595b70197ad6175c27a">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Country"/>
+    <rdf:rest rdf:nodeID="N11c57f80dca8417eb1686dc814f24226"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N56f90e315af8476ba25428615aab6580">
+    <rdf:first rdf:nodeID="N266cba6258b54ebc8da4aaa46fb42653"/>
+    <rdf:rest rdf:nodeID="N3342646461314a929fe60d57be1b9a1f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nce4ea02231a54b399fad617af42a6de6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#eats"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9627ffc4b3cc42949d2f77a9adea3c86">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="N1f3b716caf1f4eb1a8772fd79661c538"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N33ed562edec34e3c821ac9fbf6dd812a">
+    <rdf:first rdf:nodeID="Ndcc03a388f05465da7911b822c61f584"/>
+    <rdf:rest rdf:nodeID="Nc18bd7044fa04a63b8065f644cd9c393"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#feedsUpon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/awo-odp-synthesis#eats"/>
+    <owl:inverseOf rdf:resource="http://example.org/awo-odp-synthesis#isFoodOf"/>
+    <rdfs:comment>Adapted from SpeciesEat ODP feedsUpon.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nef50792bf3134ba49935d78ad8e91932">
+    <owl:intersectionOf rdf:nodeID="Nc14682fdaee14655a39be3c46ab67a9a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4f217e4037544a7bbe61a035170b99f1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#isCountryOfOccurrenceOf"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#HerbivorousOrOmnivorousAnimal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N4229181058564ea4b00706abf80ceda6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne1afedb5f2d34a68b656a415243ca368">
+    <owl:intersectionOf rdf:nodeID="N58054d6598fd41cbb3e52d349536e1e6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N048519841f0a4cb5968540c53b8c50fe">
+    <rdf:first rdf:nodeID="N11bcdd843e59443b8602a92e80f2bf56"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N166e28c0b7574acaad16d6e2f2d9ab3e">
+    <owl:intersectionOf rdf:nodeID="N1e3b9f20cf9148379c69e7f5ad2597c3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#EndangeredAnimal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Neab72b1fe2b141b4abb4ab7a1aafa35a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#AnimalThatDoesNotDrinkWater">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N47363c3bc4cb438386a683561302be5b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndd954e6b1cd54d4ab4aa48365245f6a0">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="N42386a66ffce4a20b512f3a43ce75c43"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#hasHabitat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Habitat"/>
+    <owl:inverseOf rdf:resource="http://example.org/awo-odp-synthesis#isHabitatFor"/>
+    <rdfs:comment>Adapted from SpeciesHabitat ODP.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Neca8e065bdf84de4bd48a07512978d5d">
+    <rdf:first rdf:nodeID="N93c2fbc2b6b5453d9f67b441927a540e"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N742ec2b25f2646b198d2e8cb96d90f80">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Plant"/>
+    <rdf:rest rdf:nodeID="N86352929205341c69f30d5fabd0d4404"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N16bd61d0ef734f1ca06f45ded0c85a3e">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="Neca8e065bdf84de4bd48a07512978d5d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N01e9e73347f74008b87369a8c825dd6d">
+    <owl:intersectionOf rdf:nodeID="N16bd61d0ef734f1ca06f45ded0c85a3e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0d61c888093a4446aa5f843e9f85b065">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Plant"/>
+    <rdf:rest rdf:nodeID="N56cf323231754d36aa6851d6fca2a72b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N94bc97dc390544809cf97c19e99d8ae2">
+    <owl:intersectionOf rdf:nodeID="N3cc57a10157b454caaa4149b27310d6b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#isCountryOfOccurrenceOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Country"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#isPreyedUponBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdfs:range rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N93c2fbc2b6b5453d9f67b441927a540e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#feedsUpon"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nef131ecb04f648189867238a6015bbd0">
+    <rdf:first rdf:nodeID="Na7b605d936934f12adfefad1afecbf1e"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4159adb330dd4625a25f1342730288de">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#hasHabitat"/>
+    <rdf:rest rdf:nodeID="N77b1f79afd4e473ab606f76baa62ffe7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N85678b0a91da4516a6a8bdbdd4384fc2">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Herbivore"/>
+    <rdf:rest rdf:nodeID="Ne1490551f20548aeb670e4187f29fb17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N456649bc32944739946877d290275eb3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/awo-odp-synthesis#hasHabitat"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/awo-odp-synthesis#Habitat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#AnimalSharingHabitat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="N166e28c0b7574acaad16d6e2f2d9ab3e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Neab72b1fe2b141b4abb4ab7a1aafa35a">
+    <owl:intersectionOf rdf:nodeID="N8f34e1a10e154759b22c53ecedb19cc5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Entity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N10439464aa0a4e03bc81c543d95a3d10">
+    <owl:intersectionOf rdf:nodeID="N3bd447f548324d769836c782de928b94"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Habitat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/awo-odp-synthesis#Place"/>
+    <owl:disjointWith rdf:resource="http://example.org/awo-odp-synthesis#Organism"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb3055b0a2ab64cc39f6b5b97f2188e1e">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="N56f90e315af8476ba25428615aab6580"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Substance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/awo-odp-synthesis#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N58054d6598fd41cbb3e52d349536e1e6">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="Nd749426c69f24a59b928d77d695b7781"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbdfc87271ed84a6fa254a5bec54297b5">
+    <rdf:first rdf:nodeID="Na2a09a7c8e3c4cd886bff5a1689ff78d"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nacf64f10d917414cb022fe4dea623ece">
+    <owl:unionOf rdf:nodeID="N742ec2b25f2646b198d2e8cb96d90f80"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3cc57a10157b454caaa4149b27310d6b">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="Nef131ecb04f648189867238a6015bbd0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#PlantOrPlantPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Nacf64f10d917414cb022fe4dea623ece"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N19a21253ec684fc3b34c860a7b3459d0">
+    <owl:intersectionOf rdf:nodeID="N96f80f7fe9c44a999c49f9b3e6c13307"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Place">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/awo-odp-synthesis#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N534094c377af413f8de6d02202cf3062">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Lion"/>
+    <rdf:rest rdf:nodeID="Nd3827e8a47a24d8ab815acc88e3fbdfe"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd749426c69f24a59b928d77d695b7781">
+    <rdf:first rdf:nodeID="Ncead236472244270a9762fec9db6c387"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne1fba320cd0842c0a08fbe6cc4789e2f">
+    <rdf:first rdf:nodeID="N456649bc32944739946877d290275eb3"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4270f000858743ab9934a1e7959c465b">
+    <owl:intersectionOf rdf:nodeID="Nb3055b0a2ab64cc39f6b5b97f2188e1e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9a150f9eb0794e2db6b8682da96e3e9c">
+    <owl:intersectionOf rdf:nodeID="N9627ffc4b3cc42949d2f77a9adea3c86"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4229181058564ea4b00706abf80ceda6">
+    <owl:unionOf rdf:nodeID="N85678b0a91da4516a6a8bdbdd4384fc2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N49bd4b6c3389487dadb94d3bd77a8fab">
+    <owl:intersectionOf rdf:nodeID="N0dccce920e054fdbae36c0974fde1dec"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1e3b9f20cf9148379c69e7f5ad2597c3">
+    <rdf:first rdf:resource="http://example.org/awo-odp-synthesis#Animal"/>
+    <rdf:rest rdf:nodeID="Nee4259eb4c084758913ca577d295bc6f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#StrictCarnivore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://example.org/awo-odp-synthesis#Carnivore"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2a0a8d187011495194c90e1d49c72c0b">
+    <owl:intersectionOf rdf:nodeID="N0c80bca7ba434ea593815245381e2c42"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd73742baa23149f6a691bfa582b76071">
+    <rdf:first rdf:nodeID="N5db18f86da454ace98feec05d0eecbfb"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Country">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/awo-odp-synthesis#Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3342646461314a929fe60d57be1b9a1f">
+    <rdf:first rdf:nodeID="N0b004457fba64dbcb1cd4f706410a226"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#AnimalOccurringInCountry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="Nf2721798815049f8b88897782adc3928"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N47363c3bc4cb438386a683561302be5b">
+    <owl:intersectionOf rdf:nodeID="Naf149645332441f683276bb8058b8fdd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3e8f857f69c046fcac26cfb6dd3d3f0e">
+    <rdf:first rdf:nodeID="N0151022425074e78a6c0fab00aceef12"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/awo-odp-synthesis#Water">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/awo-odp-synthesis#Substance"/>
+    <owl:disjointWith rdf:resource="http://example.org/awo-odp-synthesis#Organism"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9af20623ad5e48069caffc40e2c00938">
+    <owl:intersectionOf rdf:nodeID="N475950f9c4b84595b70197ad6175c27a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N25f53b964a7b4a4ca6dc7843671dade2">
+    <owl:complementOf rdf:nodeID="N74ec78a1f8754f35acb59f988067e111"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd19b02a5be324ffbbef201e9b9abb98c">
+    <owl:intersectionOf rdf:nodeID="Ndd954e6b1cd54d4ab4aa48365245f6a0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N42386a66ffce4a20b512f3a43ce75c43">
+    <rdf:first rdf:nodeID="Nc9764f75f658408fb06ec4ec659e7201"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf2721798815049f8b88897782adc3928">
+    <owl:intersectionOf rdf:nodeID="N4c352732929d4601a8089da83ecf06cb"/>
+  </rdf:Description>
+</rdf:RDF>

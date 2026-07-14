@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#GrilledMeatDish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>GrilledMeatDish</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#Dish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#BestWineChoiceForGrilledMeat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>BestWineChoiceForGrilledMeat</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#RecommendedForGrilledMeat"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6d232c23a75a4eff9bab21ab3ecafb6f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N854367c3851a415b84c9d55af68e4474"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0fe8c5a3a517486192819a64d723478b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/wine-cq-ontology#isCharacteristicOf"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/wine-cq-ontology#WineVintageSituation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#TanninLevel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>TanninLevel</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#WineCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#isCharacteristicOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>isCharacteristicOf</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#WineCharacteristic"/>
+    <rdfs:range rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <owl:inverseOf rdf:resource="http://example.org/wine-cq-ontology#hasCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#dependsOnCharacteristic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>dependsOnCharacteristic</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#AppropriatenessAssessment"/>
+    <rdfs:range rdf:resource="http://example.org/wine-cq-ontology#WineCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#Wine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Wine</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Ndeb11d7fff75419c91c1bee25189ac13"/>
+    <owl:disjointWith rdf:resource="http://example.org/wine-cq-ontology#Dish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#Acidity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Acidity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#WineCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#hasAppropriatenessValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>hasAppropriatenessValue</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#AppropriatenessAssessment"/>
+    <rdfs:range rdf:resource="http://example.org/wine-cq-ontology#AppropriatenessValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#hasVintageYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label>hasVintageYear</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#WineVintageSituation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#hasRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>hasRegion</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/region.owl#Region"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/region.owl#hasRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#CQ5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Which characteristics of a wine affect its appropriateness for a dish?</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#hasRecommendedWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>hasRecommendedWine</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#Dish"/>
+    <rdfs:range rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <owl:inverseOf rdf:resource="http://example.org/wine-cq-ontology#recommendedFor"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6ce8790a01fd469b80cda8efee7ff5fe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/wine-cq-ontology#pairsWith"/>
+    <owl:allValuesFrom rdf:resource="http://example.org/wine-cq-ontology#Dish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#hasCharacteristic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>hasCharacteristic</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <rdfs:range rdf:resource="http://example.org/wine-cq-ontology#WineCharacteristic"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/region.owl#hasRegion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#RedWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RedWine</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="N6d232c23a75a4eff9bab21ab3ecafb6f"/>
+    <owl:disjointWith rdf:resource="http://example.org/wine-cq-ontology#WhiteWine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#Sweetness">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Sweetness</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#WineCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N90606fdfb9ef400baac92152475f82dd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N6eecda47a6bd4a8d904ed793ee7a53bc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#GoodVintageCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/wine-cq-ontology#VintageQualityCategory"/>
+    <rdfs:label>good vintage category</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#WhiteWineCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/wine-cq-ontology#WineColorCategory"/>
+    <rdfs:label>white wine category</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb77b48aefcc3400482e69a3f246232e9">
+    <rdf:first rdf:resource="http://example.org/wine-cq-ontology#WineCharacteristic"/>
+    <rdf:rest rdf:nodeID="N60e3ba50c1d54ca4adf65f2280e51bae"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#CQ6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Does a bouquet or body of a specific wine change with vintage year?</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#AppropriatePairing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>AppropriatePairing</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="Na1014ae2bd9c4d5b89d5b7940335f638"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#NapaValley">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/region.owl#Region"/>
+    <rdfs:label>Napa Valley</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#WineCharacteristic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>WineCharacteristic</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/region.owl#Region"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#isPairedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>isPairedWith</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#Dish"/>
+    <rdfs:range rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <owl:inverseOf rdf:resource="http://example.org/wine-cq-ontology#pairsWith"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N371308e4997f410581be3c4f786a0b4d">
+    <rdf:first rdf:nodeID="Nccacc90b45f84e2fb32fb1eb1234c300"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#Body">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Body</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#WineCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#recommendedFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>recommendedFor</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <rdfs:range rdf:resource="http://example.org/wine-cq-ontology#Dish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N873871fe832842c09325e39b9a5990f6">
+    <rdf:first rdf:nodeID="N55cffcdfde9a49b2b1a8eec1b7cfbb1b"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N02ccbcffa59e4203a8205b3899c7e26f">
+    <rdf:first rdf:nodeID="Nf7fb45f62b644c23a8b3990ad4cfc025"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N068d00c2f0f74ed4a5f1f8953edee0c3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nd7ce5024d25a481585845a2a211d9578"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#RecommendedForGrilledMeat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>RecommendedForGrilledMeat</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="N90606fdfb9ef400baac92152475f82dd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne61c7306ec524f64bc4cd5a8da2c4af0">
+    <rdf:first rdf:resource="http://example.org/wine-cq-ontology#AppropriatenessAssessment"/>
+    <rdf:rest rdf:nodeID="Nc5c6395948bb4f779f68800d40f1e327"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3d05e2d8d2f3450cab3f7ad481bd1688">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy"/>
+    <owl:hasValue rdf:resource="http://example.org/wine-cq-ontology#WhiteWineCategory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#SeafoodDish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>SeafoodDish</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#Dish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6f602fadcb8147858c1aafc1b1e91609">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N009e5bd0ef1c4a2aa8a9b7e9da1689cd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5a3e0538c80248718887f2c29512f7ee">
+    <rdf:first rdf:nodeID="Na27cf4517a95400f80e7a82c2427908d"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na27cf4517a95400f80e7a82c2427908d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/wine-cq-ontology#recommendedFor"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/wine-cq-ontology#GrilledMeatDish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#RedWineCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/wine-cq-ontology#WineColorCategory"/>
+    <rdfs:label>red wine category</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd7ce5024d25a481585845a2a211d9578">
+    <rdf:first rdf:resource="http://example.org/wine-cq-ontology#ZinfandelWine"/>
+    <rdf:rest rdf:nodeID="N02ccbcffa59e4203a8205b3899c7e26f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#Bouquet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Bouquet</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#WineCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd65b9baf7a144cb4ba57f0d4c1bea2c8">
+    <rdf:first rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <rdf:rest rdf:nodeID="Na8564111e2e44698888dd49bc468d1cd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nccacc90b45f84e2fb32fb1eb1234c300">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/wine-cq-ontology#vintageOfWine"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/wine-cq-ontology#NapaZinfandel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#VintageVariableCharacteristic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>VintageVariableCharacteristic</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="Na7ca2dd31c9846daa1ce2c5c5943abc1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3525e894c74a465194b4a2ecb144ad26">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N409189fe78234fad9a8e21f095df8851"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#GoodVintage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>GoodVintage</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="N3525e894c74a465194b4a2ecb144ad26"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#WhiteWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>WhiteWine</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="N9117b179dc0b41869440c5804c1f8d26"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#Appropriate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/wine-cq-ontology#AppropriatenessValue"/>
+    <rdfs:label>Appropriate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc5c6395948bb4f779f68800d40f1e327">
+    <rdf:first rdf:nodeID="N1b58c6c787b948ecaf1f4239aeaa6093"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndeb11d7fff75419c91c1bee25189ac13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/wine-cq-ontology#hasCharacteristic"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/wine-cq-ontology#WineCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#WineChoice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>WineChoice</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#BordeauxWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>BordeauxWine</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <rdfs:subClassOf rdf:nodeID="N4f958d433f75474ebe13042e57184ebf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#hasVintageCharacteristic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>hasVintageCharacteristic</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#WineVintageSituation"/>
+    <rdfs:range rdf:resource="http://example.org/wine-cq-ontology#WineCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf7fb45f62b644c23a8b3990ad4cfc025">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/wine-cq-ontology#hasRegion"/>
+    <owl:hasValue rdf:resource="http://example.org/wine-cq-ontology#NapaValley"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#assessesDish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>assessesDish</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#AppropriatenessAssessment"/>
+    <rdfs:range rdf:resource="http://example.org/wine-cq-ontology#Dish"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N60e3ba50c1d54ca4adf65f2280e51bae">
+    <rdf:first rdf:nodeID="N0fe8c5a3a517486192819a64d723478b"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na8564111e2e44698888dd49bc468d1cd">
+    <rdf:first rdf:nodeID="N3d05e2d8d2f3450cab3f7ad481bd1688"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#AppropriatenessAssessment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>AppropriatenessAssessment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#WineDishPairingSituation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#GoodNapaZinfandelVintage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>GoodNapaZinfandelVintage</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="N6f602fadcb8147858c1aafc1b1e91609"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N20f3985d957d406c90ece1406615d023">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy"/>
+    <owl:hasValue rdf:resource="http://example.org/wine-cq-ontology#GoodVintageCategory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#assessesWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>assessesWine</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#AppropriatenessAssessment"/>
+    <rdfs:range rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#VintageQualityCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>VintageQualityCategory</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2b60bb36958748afaef0e3cf058b6087">
+    <rdf:first rdf:nodeID="N2360ef65379c413dbddeb0b4ed28bcee"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#vintageOfWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>vintageOfWine</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#WineVintageSituation"/>
+    <rdfs:range rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#CabernetSauvignonWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>CabernetSauvignonWine</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <rdfs:subClassOf rdf:nodeID="N6ce8790a01fd469b80cda8efee7ff5fe"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9117b179dc0b41869440c5804c1f8d26">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nd65b9baf7a144cb4ba57f0d4c1bea2c8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd93396cefc924540994361bdfb350a90">
+    <rdf:first rdf:nodeID="N20f3985d957d406c90ece1406615d023"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N854367c3851a415b84c9d55af68e4474">
+    <rdf:first rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <rdf:rest rdf:nodeID="Ncb110b04d0af4396b2a860dad90ff295"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2360ef65379c413dbddeb0b4ed28bcee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/wine-cq-ontology#pairsWith"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/wine-cq-ontology#SeafoodDish"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#NapaZinfandel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>NapaZinfandel</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#ZinfandelWine"/>
+    <rdfs:subClassOf rdf:nodeID="N068d00c2f0f74ed4a5f1f8953edee0c3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N869b5d030091449fb530b07f55436810">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy"/>
+    <owl:hasValue rdf:resource="http://example.org/wine-cq-ontology#RedWineCategory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#WineColorCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>WineColorCategory</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N009e5bd0ef1c4a2aa8a9b7e9da1689cd">
+    <rdf:first rdf:resource="http://example.org/wine-cq-ontology#GoodVintage"/>
+    <rdf:rest rdf:nodeID="N371308e4997f410581be3c4f786a0b4d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#WineDishPairingSituation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>WineDishPairingSituation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#WinePreferenceRank">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>WinePreferenceRank</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#AppropriatenessValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>AppropriatenessValue</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na7ca2dd31c9846daa1ce2c5c5943abc1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nb77b48aefcc3400482e69a3f246232e9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:title>Wine CQ Pattern-Based Synthesised Ontology</dcterms:title>
+    <dcterms:description>Synthesised OWL ontology generated from wine competency questions and selected Ontology Design Patterns: Classification, Region, and Situation.</dcterms:description>
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl"/>
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/region.owl"/>
+    <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl"/>
+    <owl:versionInfo>1.0</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#CQ7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>What were good vintages for Napa Zinfandel?</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#WineColor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>WineColor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#WineCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#CQ2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Is Bordeaux a red or white wine?</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#CQ4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>What is the best choice of wine for grilled meat?</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N409189fe78234fad9a8e21f095df8851">
+    <rdf:first rdf:resource="http://example.org/wine-cq-ontology#WineVintageSituation"/>
+    <rdf:rest rdf:nodeID="Nd93396cefc924540994361bdfb350a90"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#hasSetting">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nace31f4e318a46f29c4d7667fbe0c867">
+    <rdf:first rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <rdf:rest rdf:nodeID="N2b60bb36958748afaef0e3cf058b6087"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncb110b04d0af4396b2a860dad90ff295">
+    <rdf:first rdf:nodeID="N869b5d030091449fb530b07f55436810"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#pairsWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>pairsWith</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <rdfs:range rdf:resource="http://example.org/wine-cq-ontology#Dish"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6eecda47a6bd4a8d904ed793ee7a53bc">
+    <rdf:first rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <rdf:rest rdf:nodeID="N5a3e0538c80248718887f2c29512f7ee"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#WineCharacteristicDimension">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>WineCharacteristicDimension</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4f958d433f75474ebe13042e57184ebf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N77921586040c4c2b8ba28cf434139a96"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#Dish">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Dish</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na1014ae2bd9c4d5b89d5b7940335f638">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Ne61c7306ec524f64bc4cd5a8da2c4af0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/region.owl#hasRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#isSettingFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf4efcad86e5b43a4a1578e61306807bf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nace31f4e318a46f29c4d7667fbe0c867"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#WineVintageSituation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>WineVintageSituation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#SeafoodAppropriateWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>SeafoodAppropriateWine</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="Nf4efcad86e5b43a4a1578e61306807bf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6fea578b89804049b7d0ac0fc9c6fff9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy"/>
+    <owl:hasValue rdf:resource="http://example.org/wine-cq-ontology#RedWineCategory"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1b58c6c787b948ecaf1f4239aeaa6093">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/wine-cq-ontology#hasAppropriatenessValue"/>
+    <owl:hasValue rdf:resource="http://example.org/wine-cq-ontology#Appropriate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#CQ1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Which wine characteristics should I consider when choosing a wine?</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/situation.owl#Situation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/region.owl#isRegionFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#hasPreferenceRank">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>hasPreferenceRank</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+    <rdfs:range rdf:resource="http://example.org/wine-cq-ontology#WinePreferenceRank"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N77921586040c4c2b8ba28cf434139a96">
+    <rdf:first rdf:nodeID="N6fea578b89804049b7d0ac0fc9c6fff9"/>
+    <rdf:rest rdf:nodeID="N873871fe832842c09325e39b9a5990f6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#CQ3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>Does Cabernet Sauvignon go well with seafood?</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/wine-cq-ontology#ZinfandelWine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>ZinfandelWine</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/wine-cq-ontology#Wine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N55cffcdfde9a49b2b1a8eec1b7cfbb1b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy"/>
+    <owl:hasValue rdf:resource="http://example.org/wine-cq-ontology#WhiteWineCategory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/cp/owl/region.owl#Region">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>
