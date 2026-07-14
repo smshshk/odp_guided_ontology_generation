@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#hasHomogeneousMixtureKind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#HomogeneousMixture"/>
+    <rdfs:range rdf:resource="http://example.org/stuff-ontology#HomogeneousMixtureKind"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/stuff-ontology#hasKind"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N935939b1d3224a9d9de9e0928efefb0f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/stuff-ontology#hasPhase"/>
+    <owl:allValuesFrom rdf:resource="http://example.org/stuff-ontology#Phase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Substuff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Substuff</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3c8e3371be7f4c0485e190057b578cc8">
+    <rdf:first rdf:resource="http://example.org/stuff-ontology#PureStuff"/>
+    <rdf:rest rdf:nodeID="N61b0dd960fdd49c5b139c0a932f22609"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N00c38275ed564d47a1ddd6010935d873">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/stuff-ontology#hasSubstuff"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://example.org/stuff-ontology#Substuff"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#hasBulkCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#Bulk"/>
+    <rdfs:range rdf:resource="http://example.org/stuff-ontology#BulkCategory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#substuffOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#Substuff"/>
+    <rdfs:range rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+    <owl:inverseOf rdf:resource="http://example.org/stuff-ontology#hasSubstuff"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#GasPhase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Gas Phase</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/stuff-ontology#Phase"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8f22406fa7c34d25ac3bee9c80817c8f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/stuff-ontology#constitutedBy"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#ExactlyTwoSubstuffStuff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+    <owl:equivalentClass rdf:nodeID="N0de00eb38a9542989efed9f769670555"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:title>Stuff Competency Question Ontology</dcterms:title>
+    <dcterms:description>An OWL ontology generated from competency questions about stuff, mixtures, colloids, phases, substuffs, structure, and bulk categorisation.</dcterms:description>
+    <owl:versionInfo>1.0</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncac4fc16a9fa4ad6ae7f9002d8d48b78">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/stuff-ontology#hasBulkCategory"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/stuff-ontology#BulkCategory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Foam">
+    <rdf:type rdf:resource="http://example.org/stuff-ontology#ColloidKind"/>
+    <rdfs:label>Foam</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Solution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Solution</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/stuff-ontology#HomogeneousMixture"/>
+    <rdfs:subClassOf rdf:nodeID="N6787cf2502d549b3932532b92f7595a8"/>
+    <owl:disjointWith rdf:resource="http://example.org/stuff-ontology#Emulsion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5ad09a3c56ad498995347d3381d8be78">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/stuff-ontology#hasSubstuff"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/stuff-ontology#Substuff"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#StructuredStuff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Structured Stuff</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+    <rdfs:subClassOf rdf:nodeID="Ne8018e6209fa4a408ac89b21655d025a"/>
+    <owl:disjointWith rdf:resource="http://example.org/stuff-ontology#UnstructuredStuff"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#hasPhase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+    <rdfs:range rdf:resource="http://example.org/stuff-ontology#Phase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#HomogeneousMixture">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Homogeneous Mixture</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/stuff-ontology#MixedStuff"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#hasStructureDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#StructuredStuff"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Liquid">
+    <rdf:type rdf:resource="http://example.org/stuff-ontology#LiquidPhase"/>
+    <rdfs:label>Liquid</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#hasStructure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Sol">
+    <rdf:type rdf:resource="http://example.org/stuff-ontology#ColloidKind"/>
+    <rdfs:label>Sol</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#hasPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+    <rdfs:range rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0de00eb38a9542989efed9f769670555">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/stuff-ontology#hasSubstuff"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://example.org/stuff-ontology#Substuff"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3319b4d7e83d47f9a26773e4d656e4c4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/stuff-ontology#dispersedPhase"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/stuff-ontology#Phase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#MixedStuff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Mixed Stuff</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+    <rdfs:subClassOf rdf:nodeID="N5ad09a3c56ad498995347d3381d8be78"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Aerosol">
+    <rdf:type rdf:resource="http://example.org/stuff-ontology#ColloidKind"/>
+    <rdfs:label>Aerosol</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#dispersedPhase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#Colloid"/>
+    <rdfs:range rdf:resource="http://example.org/stuff-ontology#Phase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Colloid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Colloid</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/stuff-ontology#MixedStuff"/>
+    <rdfs:subClassOf rdf:nodeID="N3319b4d7e83d47f9a26773e4d656e4c4"/>
+    <rdfs:subClassOf rdf:nodeID="N484c170bd0cc401f8bbb405cf39e6e14"/>
+    <rdfs:subClassOf rdf:nodeID="N935939b1d3224a9d9de9e0928efefb0f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N484c170bd0cc401f8bbb405cf39e6e14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/stuff-ontology#continuousPhase"/>
+    <owl:someValuesFrom rdf:resource="http://example.org/stuff-ontology#Phase"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne8018e6209fa4a408ac89b21655d025a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/stuff-ontology#hasStructure"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Bulk">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Bulk</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N8f22406fa7c34d25ac3bee9c80817c8f"/>
+    <rdfs:subClassOf rdf:nodeID="Ncac4fc16a9fa4ad6ae7f9002d8d48b78"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Phase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Phase</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#continuousPhase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#Colloid"/>
+    <rdfs:range rdf:resource="http://example.org/stuff-ontology#Phase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Emulsion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Emulsion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/stuff-ontology#Colloid"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#PureStuff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Pure Stuff</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+    <rdfs:subClassOf rdf:nodeID="N00c38275ed564d47a1ddd6010935d873"/>
+    <owl:disjointWith rdf:resource="http://example.org/stuff-ontology#MixedStuff"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd49a21c652e94268bfe75a49ac40420f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/stuff-ontology#hasStructure"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#hasSubstuff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+    <rdfs:range rdf:resource="http://example.org/stuff-ontology#Substuff"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/stuff-ontology#hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N61b0dd960fdd49c5b139c0a932f22609">
+    <rdf:first rdf:resource="http://example.org/stuff-ontology#MixedStuff"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#EmulsionKind">
+    <rdf:type rdf:resource="http://example.org/stuff-ontology#ColloidKind"/>
+    <rdfs:label>Emulsion Kind</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#hasColloidKind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#Colloid"/>
+    <rdfs:range rdf:resource="http://example.org/stuff-ontology#ColloidKind"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.org/stuff-ontology#hasKind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#partOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+    <rdfs:range rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+    <owl:inverseOf rdf:resource="http://example.org/stuff-ontology#hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Gel">
+    <rdf:type rdf:resource="http://example.org/stuff-ontology#ColloidKind"/>
+    <rdfs:label>Gel</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Solid">
+    <rdf:type rdf:resource="http://example.org/stuff-ontology#SolidPhase"/>
+    <rdfs:label>Solid</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#SolutionKind">
+    <rdf:type rdf:resource="http://example.org/stuff-ontology#HomogeneousMixtureKind"/>
+    <rdfs:label>Solution Kind</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#LiquidPhase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Liquid Phase</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/stuff-ontology#Phase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#SolidPhase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Solid Phase</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/stuff-ontology#Phase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Gas">
+    <rdf:type rdf:resource="http://example.org/stuff-ontology#GasPhase"/>
+    <rdfs:label>Gas</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#UnstructuredStuff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Unstructured Stuff</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+    <rdfs:subClassOf rdf:nodeID="Nd49a21c652e94268bfe75a49ac40420f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#hasKind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#ColloidHomogeneousMixtureKind">
+    <rdf:type rdf:resource="http://example.org/stuff-ontology#HomogeneousMixtureKind"/>
+    <rdfs:label>Colloid Homogeneous Mixture Kind</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#constitutedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/stuff-ontology#Bulk"/>
+    <rdfs:range rdf:resource="http://example.org/stuff-ontology#Stuff"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#BulkCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Bulk Category</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#hasName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6787cf2502d549b3932532b92f7595a8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/stuff-ontology#hasPhase"/>
+    <owl:allValuesFrom rdf:resource="http://example.org/stuff-ontology#Phase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#Stuff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Stuff</rdfs:label>
+    <owl:disjointUnionOf rdf:nodeID="N3c8e3371be7f4c0485e190057b578cc8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#HomogeneousMixtureKind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Homogeneous Mixture Kind</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/stuff-ontology#ColloidKind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Colloid Kind</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
